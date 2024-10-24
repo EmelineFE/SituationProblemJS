@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP JS - groupe 1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="time"], input[type="number"], input[type="date"] {
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        input[type="radio"] + label{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        button[type="submit"]:hover{
+            background-color: #45a049;
+           margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Expérience de conduite</legend>
+            <label for="heureDebut">Heure de début : </label>
+            <input type="time" id="heureDebut" name="heureDebut" required>
+
+            <label for="heureFin">Heure de fin : </label>
+            <input type="time" id="heureFin" name="heureFin" required>
+
+            <label for="nbKm">Nombre de kilomètres : </label>
+            <input type="number" id="nbKm" name="nbKm" min="1" required>
+
+            <label for="date">Date : </label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="idMeteo">Météo : </label>
+            <input list="meteo-data" id="idMeteo" />
+            <datalist id="meteo-data">
+                <option value="Soleil"></option>
+                <option value="Venteux"></option>
+                <option value="Neigeux"></option>
+                <option value="Pluvieux"></option>
+            </datalist>
+
+            <label for="idEtatTrafic">Etat du trafic : </label>
+            <input list="trafic-data" id="idEtatTrafic" />
+            <datalist id="trafic-data">
+                <option value="faible"></option>
+                <option value="dense"></option>
+                <option value="très dense"></option>
+            </datalist>
+
+            <label>Condition de conduite :</label>
+            <input type="radio" name="condition" id="jour" value="jour" />
+            <label for="jour">Jour</label>
+            <input type="radio" name="condition" id="nuit" value="nuit" />
+            <label for="nuit">Nuit</label>
+
+        </fieldset>
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
