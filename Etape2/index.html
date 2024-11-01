@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire d'expérience de conduite</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        margin-top: 10px;
+      }
+      select,
+      input[type="text"],
+      input[type="date"],
+      input[type="time"],
+      input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+      }
+      .checkbox-group label {
+        font-weight: normal;
+        margin: 3px 0;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Formulaire d'expérience de conduite</h1>
+    <form id="drivExpForm">
+      <label for="date">Date :</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="startTime">Heure de début :</label>
+      <input type="time" id="startTime" name="startTime" required />
+
+      <label for="endTime">Heure de fin :</label>
+      <input type="time" id="endTime" name="endTime" required />
+
+      <label for="nbKm">Nombre de kilomètres :</label>
+      <input type="number" id="nbKm" name="nbKm" min="1" required />
+
+      <label for="idMeteo">Météo :</label>
+      <select id="idMeteo" name="idMeteo" required>
+        <option value="1">Soleil</option>
+        <option value="2">Venteux</option>
+        <option value="3">Neigeux</option>
+        <option value="4">Pluvieux</option>
+      </select>
+
+      <label for="idTrafficStatus">État du trafic :</label>
+      <select id="idTrafficStatus" name="idTrafficStatus" required>
+        <option value="1">Fluide</option>
+        <option value="2">Dense</option>
+        <option value="3">Saturé</option>
+      </select>
+
+      <label for="idManeuverPerformed">Manoeuvres effectuées :</label>
+      <div class="checkbox-group">
+        <label
+          ><input type="checkbox" name="idManeuverPerformed" value="1" />
+          Freinage de précision</label
+        >
+        <label
+          ><input type="checkbox" name="idManeuverPerformed" value="2" /> Marche
+          arrière en ligne droite</label
+        >
+        <label
+          ><input type="checkbox" name="idManeuverPerformed" value="3" /> Marche
+          arrière en courbe</label
+        >
+        <label
+          ><input type="checkbox" name="idManeuverPerformed" value="4" />
+          Demi-tour en trois temps</label
+        >
+        <label
+          ><input type="checkbox" name="idManeuverPerformed" value="5" /> Se
+          garer en épi</label
+        >
+        <label
+          ><input type="checkbox" name="idManeuverPerformed" value="6" /> Se
+          ranger en bataille avant</label
+        >
+        <label
+          ><input type="checkbox" name="idManeuverPerformed" value="7" /> Se
+          ranger en bataille arrière</label
+        >
+      </div>
+
+      <label for="idRoadType">Type de route :</label>
+      <select id="idRoadType" name="idRoadType" required>
+        <option value="1">Autoroute</option>
+        <option value="2">Zone urbaine</option>
+        <option value="3">Montagne</option>
+        <option value="4">Départementale</option>
+      </select>
+
+      <button type="submit">Enregistrer l'expérience</button>
+    </form>
+  </body>
+</html>

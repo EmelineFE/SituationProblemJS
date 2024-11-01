@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SP JS - groupe 1</title>
+
+    <script>
+      let expConduite = [
+        {
+          idExpCond: 1,
+          heureDebut: "08:30",
+          heureFin: "10:30",
+          nbKm: 30,
+          date: "2024-10-03",
+          idMeteo: 3,
+          idEtatTrafic: 2,
+          idConditionConduite: 1,
+          idTypeRoute: 3,
+        },
+      ];
+      console.log("expConduite :");
+      console.log(expConduite);
+
+      let meteo = [
+        { idMeteo: 1, label: "Soleil" },
+        { idMeteo: 2, label: "Venteux" },
+        { idMeteo: 3, label: "Neigeux" },
+        { idMeteo: 4, label: "Pluvieux" },
+      ];
+      console.log("meteo :");
+      console.log(meteo);
+
+      let etatTrafic = [
+        { idEtatTrafic: 1, label: "faible" },
+        { idEtatTrafic: 2, label: "dense" },
+        { idEtatTrafic: 3, label: "très dense" },
+      ];
+      console.log("etatTrafic :");
+      console.log(etatTrafic);
+
+      let conditionConduite = [
+        { idConditionConduite: 1, label: "jour" },
+        { idConditionConduite: 2, label: "nuit" },
+      ];
+      console.log("conditionConduite :");
+      console.log(conditionConduite);
+
+      let typeRoute = [
+        { idTypeRoute: 1, label: "autoroute" },
+        { idTypeRoute: 2, label: "zone urbaine" },
+        { idTypeRoute: 3, label: "montagne" },
+        { idTypeRoute: 4, label: "départementale" },
+      ];
+      console.log("typeRoute :");
+      console.log(typeRoute);
+    </script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 200px;
+        background-color: beige;
+        font-family: Arial, Helvetica, system-ui, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      Situation problème JavaScript <br />
+      groupe 1
+    </h1>
+
+    <h2>Étape 1 - données JSON</h2>
+    <br />
+
+    <p>
+      Par <strong>Saal Ahmed Mohamed</strong>, <strong>Julie Lausecker</strong>,
+      <strong>Julien Guichard</strong> et <strong>Emeline Feron</strong>.
+    </p>
+  </body>
+</html>
